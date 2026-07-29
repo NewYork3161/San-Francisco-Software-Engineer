@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Michael Clark software engineering and development blog."
+    >
+
+    <title>Blog | Michael Clark</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Blog CSS -->
+    <link
+        rel="stylesheet"
+        href="/css/blogScreen.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         NAVIGATION
+    ========================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark steam-navbar sticky-top">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand fw-bold"
+                href="/"
+            >
+                MICHAEL CLARK
+            </a>
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar"
+            >
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="/"
+                        >
+                            HOME
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="/projects"
+                        >
+                            PROJECTS
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="/resume"
+                        >
+                            RESUME
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="/blog"
+                        >
+                            BLOG
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ========================================
+         MAIN PAGE
+    ========================================= -->
+
+    <main class="container blog-page">
+
+
+        <!-- ========================================
+             BLOG HEADER
+        ========================================= -->
+
+        <section class="blog-header-section">
+
+            <p class="page-label">
+                DEVELOPMENT JOURNAL
+            </p>
+
+            <h1>
+                Software Engineering Blog
+            </h1>
+
+            <p class="blog-intro">
+
+                Development notes, software engineering projects,
+                programming experiments, technical ideas, and things
+                I learn while building software.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- ========================================
+             CREATE BLOG POST
+        ========================================= -->
+
+        <section class="create-post-card">
+
+            <div class="create-post-heading">
+
+                <p class="small-label">
+                    NEW ENTRY
+                </p>
+
+                <h2>
+                    Create Blog Post
+                </h2>
+
+            </div>
+
+
+            <form
+                action="/blog"
+                method="POST"
+                enctype="multipart/form-data"
+                class="blog-form"
+                id="createPostForm"
+            >
+
+
+                <!-- TITLE -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="title"
+                        class="form-label"
+                    >
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        class="form-control steam-input"
+                        placeholder="Enter blog post title"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- BODY -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="body"
+                        class="form-label"
+                    >
+                        Body
+                    </label>
+
+                    <textarea
+                        id="body"
+                        name="body"
+                        class="form-control steam-input"
+                        rows="9"
+                        placeholder="Write your blog post..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- IMAGE UPLOAD -->
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Image
+                    </label>
+
+
+                    <div
+                        class="image-drop-zone"
+                        id="blogImageDropZone"
+                    >
+
+
+                        <input
+                            type="file"
+                            id="blogImage"
+                            name="image"
+                            accept="image/*"
+                            hidden
+                        >
+
+
+                        <div
+                            class="drop-zone-content"
+                            id="dropZoneContent"
+                        >
+
+                            <div class="upload-symbol">
+                                +
+                            </div>
+
+                            <h3>
+                                Add an Image
+                            </h3>
+
+                            <p>
+                                Drag and drop an image here
+                            </p>
+
+                            <span>
+                                or
+                            </span>
+
+                            <button
+                                type="button"
+                                class="choose-image-button"
+                                id="chooseBlogImageButton"
+                            >
+                                Choose Image
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- IMAGE PREVIEW -->
+
+                        <div
+                            class="image-preview-container"
+                            id="blogImagePreviewContainer"
+                        >
+
+                            <img
+                                id="blogImagePreview"
+                                alt="Blog image preview"
+                            >
+
+                            <button
+                                type="button"
+                                class="remove-preview-button"
+                                id="removeBlogImageButton"
+                            >
+                                Remove Image
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PUBLISH -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="publish-post-button"
+                    >
+                        Publish Post
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ========================================
+             BLOG POSTS
+        ========================================= -->
+
+        <section class="blog-posts-section">
+
+            <div class="blog-posts-heading">
+
+                <p class="small-label">
+                    LATEST POSTS
+                </p>
+
+                <h2>
+                    Blog
+                </h2>
+
+            </div>
+
+
+
+            <!-- EMPTY BLOG -->
+
+            <% if (
+                typeof posts === "undefined" ||
+                !posts ||
+                posts.length === 0
+            ) { %>
+
+                <div class="no-posts">
+
+                    <h3>
+                        No blog posts yet.
+                    </h3>
+
+                    <p>
+                        New posts will appear here after they are published.
+                    </p>
+
+                </div>
+
+            <% } %>
+
+
+
+            <!-- BLOG POST LOOP -->
+
+            <% if (
+                typeof posts !== "undefined" &&
+                posts &&
+                posts.length > 0
+            ) { %>
+
+
+                <div class="blog-post-list">
+
+
+                    <% posts.forEach(post => { %>
+
+
+                        <!-- INDIVIDUAL BLOG POST -->
+
+                        <article
+                            class="blog-post-card"
+                            id="post-<%= post.id %>"
+                            data-post-id="<%= post.id %>"
+                        >
+
+
+                            <!-- ADMIN X -->
+
+                            <button
+                                type="button"
+                                class="admin-post-button"
+                                data-post-id="<%= post.id %>"
+                                aria-label="Manage blog post"
+                                title="Manage Post"
+                            >
+                                ×
+                            </button>
+
+
+
+                            <!-- POST IMAGE -->
+
+                            <% if (post.image_url) { %>
+
+                                <div class="post-image-wrapper">
+
+                                    <img
+                                        src="<%= post.image_url %>"
+                                        alt="<%= post.title %>"
+                                        class="post-image"
+                                    >
+
+                                </div>
+
+                            <% } %>
+
+
+
+                            <!-- POST CONTENT -->
+
+                            <div class="post-content">
+
+
+                                <!-- DATE -->
+
+                                <% if (post.created_at) { %>
+
+                                    <p class="post-date">
+
+                                        <%= new Date(
+                                            post.created_at
+                                        ).toLocaleDateString(
+                                            "en-US",
+                                            {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric"
+                                            }
+                                        ) %>
+
+                                    </p>
+
+                                <% } %>
+
+
+
+                                <!-- TITLE -->
+
+                                <h2 class="post-title">
+                                    <%= post.title %>
+                                </h2>
+
+
+
+                                <!-- BODY -->
+
+                                <div class="post-body">
+
+                                    <p>
+                                        <%= post.body %>
+                                    </p>
+
+                                </div>
+
+
+
+                                <!-- ========================================
+                                     COMMENTS SECTION
+                                ========================================= -->
+
+                                <section class="comments-section">
+
+
+                                    <div class="comments-heading">
+
+                                        <h3>
+                                            Comments
+                                        </h3>
+
+                                    </div>
+
+
+
+                                    <!-- EXISTING COMMENTS -->
+
+                                    <div class="comments-list">
+
+
+                                        <% if (
+                                            post.comments &&
+                                            post.comments.length > 0
+                                        ) { %>
+
+
+                                            <% post.comments.forEach(comment => { %>
+
+
+                                                <div
+                                                    class="comment-card"
+                                                    data-comment-id="<%= comment.id %>"
+                                                >
+
+
+                                                    <!-- COMMENT HEADER -->
+
+                                                    <div class="comment-header">
+
+                                                        <strong class="comment-author">
+
+                                                            <%= comment.author_name || "Guest" %>
+
+                                                        </strong>
+
+
+                                                        <% if (comment.created_at) { %>
+
+                                                            <span class="comment-date">
+
+                                                                <%= new Date(
+                                                                    comment.created_at
+                                                                ).toLocaleDateString(
+                                                                    "en-US",
+                                                                    {
+                                                                        year: "numeric",
+                                                                        month: "short",
+                                                                        day: "numeric"
+                                                                    }
+                                                                ) %>
+
+                                                            </span>
+
+                                                        <% } %>
+
+                                                    </div>
+
+
+
+                                                    <!-- COMMENT BODY -->
+
+                                                    <p
+                                                        class="comment-body"
+                                                        id="commentBodyText-<%= comment.id %>"
+                                                    >
+                                                        <%= comment.body %>
+                                                    </p>
+
+
+
+                                                    <!-- COMMENT CONTROLS -->
+
+                                                    <div class="comment-controls">
+
+
+                                                        <button
+                                                            type="button"
+                                                            class="edit-comment-button"
+                                                            data-comment-id="<%= comment.id %>"
+                                                        >
+                                                            Edit
+                                                        </button>
+
+
+                                                        <button
+                                                            type="button"
+                                                            class="delete-comment-button"
+                                                            data-comment-id="<%= comment.id %>"
+                                                        >
+                                                            Delete
+                                                        </button>
+
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                            <% }); %>
+
+
+                                        <% } else { %>
+
+
+                                            <p class="no-comments">
+                                                No comments yet.
+                                            </p>
+
+
+                                        <% } %>
+
+
+                                    </div>
+
+
+
+                                    <!-- ADD COMMENT -->
+
+                                    <div class="add-comment-section">
+
+                                        <h4>
+                                            Add Comment
+                                        </h4>
+
+
+                                        <form
+                                            action="/blog/<%= post.id %>/comments"
+                                            method="POST"
+                                            class="comment-form"
+                                        >
+
+
+                                            <!-- NAME -->
+
+                                            <div class="mb-3">
+
+                                                <label
+                                                    for="commentName-<%= post.id %>"
+                                                    class="form-label"
+                                                >
+                                                    Name
+                                                </label>
+
+
+                                                <input
+                                                    type="text"
+                                                    id="commentName-<%= post.id %>"
+                                                    name="author_name"
+                                                    class="form-control steam-input"
+                                                    placeholder="Your name"
+                                                    required
+                                                >
+
+                                            </div>
+
+
+
+                                            <!-- COMMENT -->
+
+                                            <div class="mb-3">
+
+                                                <label
+                                                    for="commentBody-<%= post.id %>"
+                                                    class="form-label"
+                                                >
+                                                    Comment
+                                                </label>
+
+
+                                                <textarea
+                                                    id="commentBody-<%= post.id %>"
+                                                    name="body"
+                                                    class="form-control steam-input"
+                                                    rows="4"
+                                                    placeholder="Write a comment..."
+                                                    required
+                                                ></textarea>
+
+                                            </div>
+
+
+
+                                            <button
+                                                type="submit"
+                                                class="submit-comment-button"
+                                            >
+                                                Post Comment
+                                            </button>
+
+
+                                        </form>
+
+                                    </div>
+
+
+                                </section>
+
+
+                            </div>
+
+
+                        </article>
+
+
+                    <% }); %>
+
+
+                </div>
+
+
+            <% } %>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         ADMIN CODE MODAL
+         ONLY FOR MAIN BLOG POSTS
+    ========================================= -->
+
+    <div
+        class="modal fade"
+        id="adminCodeModal"
+        tabindex="-1"
+        aria-labelledby="adminCodeModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content steam-modal">
+
+
+                <div class="modal-header">
+
+                    <h5
+                        class="modal-title"
+                        id="adminCodeModalLabel"
+                    >
+                        Administrator Access
+                    </h5>
+
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+
+                </div>
+
+
+
+                <div class="modal-body">
+
+                    <p>
+                        Enter your administrator code to manage this post.
+                    </p>
+
+
+                    <input
+                        type="password"
+                        id="adminCode"
+                        class="form-control steam-input"
+                        placeholder="Administrator code"
+                        autocomplete="off"
+                    >
+
+
+                    <p
+                        id="adminCodeError"
+                        class="admin-error"
+                    ></p>
+
+                </div>
+
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="modal-cancel-button"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="modal-confirm-button"
+                        id="verifyAdminButton"
+                    >
+                        Continue
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         MANAGE MAIN BLOG POST MODAL
+    ========================================= -->
+
+    <div
+        class="modal fade"
+        id="managePostModal"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content steam-modal">
+
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Manage Blog Post
+                    </h5>
+
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+
+                </div>
+
+
+
+                <div class="modal-body">
+
+                    <p>
+                        What would you like to do?
+                    </p>
+
+                </div>
+
+
+
+                <div class="modal-footer manage-buttons">
+
+
+                    <button
+                        type="button"
+                        class="modal-cancel-button"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="edit-post-button"
+                        id="editPostButton"
+                    >
+                        Edit Post
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="delete-post-button"
+                        id="deletePostButton"
+                    >
+                        Delete Post
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         EDIT MAIN BLOG POST MODAL
+    ========================================= -->
+
+    <div
+        class="modal fade"
+        id="editPostModal"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content steam-modal">
+
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Edit Blog Post
+                    </h5>
+
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+
+                </div>
+
+
+
+                <form
+                    id="editPostForm"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+
+
+                    <input
+                        type="hidden"
+                        name="adminCode"
+                        id="editPostAdminCode"
+                    >
+
+
+                    <div class="modal-body">
+
+
+                        <!-- EDIT TITLE -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="editPostTitle"
+                                class="form-label"
+                            >
+                                Title
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="editPostTitle"
+                                name="title"
+                                class="form-control steam-input"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- EDIT BODY -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="editPostBody"
+                                class="form-label"
+                            >
+                                Body
+                            </label>
+
+
+                            <textarea
+                                id="editPostBody"
+                                name="body"
+                                class="form-control steam-input"
+                                rows="8"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- CURRENT IMAGE -->
+
+                        <div
+                            class="current-post-preview"
+                            id="currentPostPreview"
+                            style="display: none;"
+                        >
+
+                            <p class="form-label">
+                                Current Image
+                            </p>
+
+
+                            <img
+                                id="editPostCurrentImage"
+                                src=""
+                                alt="Current blog post image"
+                            >
+
+                        </div>
+
+
+
+                        <!-- REPLACE IMAGE -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="editPostImage"
+                                class="form-label"
+                            >
+                                Replace Image
+                            </label>
+
+
+                            <input
+                                type="file"
+                                id="editPostImage"
+                                name="image"
+                                accept="image/*"
+                                class="form-control steam-input"
+                            >
+
+
+                            <small class="edit-image-note">
+                                Leave empty to keep the existing image.
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="modal-footer">
+
+                        <button
+                            type="button"
+                            class="modal-cancel-button"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancel
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="modal-confirm-button"
+                        >
+                            Save Changes
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         DELETE MAIN BLOG POST FORM
+    ========================================= -->
+
+    <form
+        id="deletePostForm"
+        method="POST"
+        style="display: none;"
+    >
+
+        <input
+            type="hidden"
+            name="adminCode"
+            id="deletePostAdminCode"
+        >
+
+    </form>
+
+
+
+    <!-- ========================================
+         EDIT COMMENT MODAL
+         NO ADMIN CODE
+    ========================================= -->
+
+    <div
+        class="modal fade"
+        id="editCommentModal"
+        tabindex="-1"
+        aria-labelledby="editCommentModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content steam-modal">
+
+
+                <div class="modal-header">
+
+                    <h5
+                        class="modal-title"
+                        id="editCommentModalLabel"
+                    >
+                        Edit Comment
+                    </h5>
+
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+
+                </div>
+
+
+
+                <form
+                    id="editCommentForm"
+                    method="POST"
+                >
+
+
+                    <div class="modal-body">
+
+
+                        <div class="mb-3">
+
+                            <label
+                                for="editCommentBody"
+                                class="form-label"
+                            >
+                                Comment
+                            </label>
+
+
+                            <textarea
+                                id="editCommentBody"
+                                name="body"
+                                class="form-control steam-input comment-modal-textarea"
+                                rows="10"
+                                placeholder="Edit your comment..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <p
+                            id="editCommentError"
+                            class="admin-error"
+                        ></p>
+
+
+                    </div>
+
+
+
+                    <div class="modal-footer">
+
+                        <button
+                            type="button"
+                            class="modal-cancel-button"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancel
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="modal-confirm-button"
+                            id="saveCommentChangesButton"
+                        >
+                            Save Changes
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         DELETE COMMENT MODAL
+         NO ADMIN CODE
+    ========================================= -->
+
+    <div
+        class="modal fade"
+        id="deleteCommentModal"
+        tabindex="-1"
+        aria-labelledby="deleteCommentModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content steam-modal">
+
+
+                <div class="modal-header">
+
+                    <h5
+                        class="modal-title"
+                        id="deleteCommentModalLabel"
+                    >
+                        Delete Comment
+                    </h5>
+
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+
+                </div>
+
+
+
+                <form
+                    id="deleteCommentForm"
+                    method="POST"
+                >
+
+
+                    <div class="modal-body">
+
+
+                        <p class="delete-comment-question">
+                            Are you sure you want to delete this comment?
+                        </p>
+
+
+                        <div class="delete-comment-preview">
+
+                            <p
+                                id="deleteCommentPreviewText"
+                                class="delete-comment-preview-text"
+                            ></p>
+
+                        </div>
+
+
+                        <p class="delete-comment-warning">
+                            This deletes only this comment. The main blog post
+                            and all other comments will remain.
+                        </p>
+
+
+                        <p
+                            id="deleteCommentError"
+                            class="admin-error"
+                        ></p>
+
+
+                    </div>
+
+
+
+                    <div class="modal-footer">
+
+                        <button
+                            type="button"
+                            class="modal-cancel-button"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancel
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="delete-post-button"
+                            id="confirmDeleteCommentButton"
+                        >
+                            Delete Comment
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         BOOTSTRAP JAVASCRIPT
+    ========================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+
+
+    <!-- ========================================
+         BLOG JAVASCRIPT
+    ========================================= -->
+
+    <script src="/js/blogScreen.js"></script>
+
+
+</body>
+
+</html>

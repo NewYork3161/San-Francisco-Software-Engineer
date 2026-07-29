@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Software engineering and full-stack development projects by Michael Clark."
+    >
+
+    <title>Projects | Michael Clark</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Project CSS -->
+    <link
+        rel="stylesheet"
+        href="/css/projectScreen.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         NAVIGATION
+    ========================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark steam-navbar sticky-top">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand fw-bold"
+                href="/"
+            >
+                MICHAEL CLARK
+            </a>
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar"
+            >
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="/"
+                        >
+                            HOME
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            href="/projects"
+                        >
+                            PROJECTS
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="/resume"
+                        >
+                            RESUME
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="/blog"
+                        >
+                            BLOG
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ========================================
+         MAIN PAGE
+    ========================================= -->
+
+    <main class="container project-page">
+
+
+        <!-- ========================================
+             PAGE HEADER
+        ========================================= -->
+
+        <section class="project-header-section">
+
+            <p class="page-label">
+                SOFTWARE ENGINEERING PORTFOLIO
+            </p>
+
+            <h1>
+                Projects
+            </h1>
+
+            <p class="project-intro">
+                A collection of software engineering,
+                full-stack development, mobile development,
+                database, and AI projects.
+            </p>
+
+        </section>
+
+
+
+        <!-- ========================================
+             CREATE PROJECT
+        ========================================= -->
+
+        <section class="create-project-card">
+
+            <div class="create-project-heading">
+
+                <div>
+                    <p class="small-label">
+                        PORTFOLIO MANAGER
+                    </p>
+
+                    <h2>
+                        Add New Project
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <form
+                action="/projects"
+                method="POST"
+                enctype="multipart/form-data"
+                class="project-form"
+            >
+
+
+                <!-- Project Title -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="title"
+                        class="form-label"
+                    >
+                        Project Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        class="form-control steam-input"
+                        placeholder="Enter project title"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Project Description -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="body"
+                        class="form-label"
+                    >
+                        Project Description
+                    </label>
+
+                    <textarea
+                        id="body"
+                        name="body"
+                        class="form-control steam-input"
+                        rows="7"
+                        placeholder="Describe the project..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- Technologies -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="technologies"
+                        class="form-label"
+                    >
+                        Technologies
+                    </label>
+
+                    <input
+                        type="text"
+                        id="technologies"
+                        name="technologies"
+                        class="form-control steam-input"
+                        placeholder="JavaScript, Node.js, Express, Supabase..."
+                    >
+
+                </div>
+
+
+
+                <!-- GitHub URL -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="github_url"
+                        class="form-label"
+                    >
+                        GitHub URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="github_url"
+                        name="github_url"
+                        class="form-control steam-input"
+                        placeholder="GitHub repository URL"
+                    >
+
+                </div>
+
+
+
+                <!-- Live Application URL -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="live_url"
+                        class="form-label"
+                    >
+                        Live Application URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="live_url"
+                        name="live_url"
+                        class="form-control steam-input"
+                        placeholder="Live application URL"
+                    >
+
+                </div>
+
+
+
+                <!-- Image Upload -->
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Project Image
+                    </label>
+
+
+                    <div
+                        class="image-drop-zone"
+                        id="imageDropZone"
+                    >
+
+                        <input
+                            type="file"
+                            id="projectImage"
+                            name="image"
+                            accept="image/*"
+                            hidden
+                        >
+
+
+                        <div class="drop-zone-content">
+
+                            <div class="upload-symbol">
+                                +
+                            </div>
+
+                            <h3>
+                                Add Project Image
+                            </h3>
+
+                            <p>
+                                Drag and drop an image here
+                            </p>
+
+                            <span>
+                                or
+                            </span>
+
+                            <button
+                                type="button"
+                                class="choose-image-button"
+                                id="chooseImageButton"
+                            >
+                                Choose Image
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="image-preview-container"
+                            id="imagePreviewContainer"
+                        >
+
+                            <img
+                                id="imagePreview"
+                                alt="Project preview"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="publish-project-button"
+                    >
+                        Publish Project
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ========================================
+             PROJECT LIST
+        ========================================= -->
+
+        <section class="projects-section">
+
+            <div class="projects-section-heading">
+
+                <p class="small-label">
+                    DEVELOPMENT WORK
+                </p>
+
+                <h2>
+                    My Projects
+                </h2>
+
+            </div>
+
+
+
+            <!-- ========================================
+                 NO PROJECTS
+            ========================================= -->
+
+            <% if (!projects || projects.length === 0) { %>
+
+                <div class="no-projects">
+
+                    <h3>
+                        No projects yet.
+                    </h3>
+
+                    <p>
+                        Projects added above will appear here.
+                    </p>
+
+                </div>
+
+            <% } %>
+
+
+
+            <!-- ========================================
+                 DATABASE PROJECT LOOP
+            ========================================= -->
+
+            <% if (projects && projects.length > 0) { %>
+
+                <div class="project-grid">
+
+                    <% projects.forEach(project => { %>
+
+
+                        <!-- ========================================
+                             INDIVIDUAL PROJECT CARD
+                        ========================================= -->
+
+                        <article
+                            class="portfolio-project-card"
+                            data-project-id="<%= project.id %>"
+                        >
+
+
+                            <!-- Admin X Button -->
+
+                            <button
+                                type="button"
+                                class="admin-project-button"
+                                data-project-id="<%= project.id %>"
+                                aria-label="Manage project"
+                            >
+                                ×
+                            </button>
+
+
+
+                            <!-- Project Image -->
+
+                            <% if (project.image_url) { %>
+
+                                <div class="project-image-wrapper">
+
+                                    <img
+                                        src="<%= project.image_url %>"
+                                        alt="<%= project.title %>"
+                                        class="project-image"
+                                    >
+
+                                </div>
+
+                            <% } %>
+
+
+
+                            <!-- Project Content -->
+
+                            <div class="project-content">
+
+
+                                <!-- Date -->
+
+                                <% if (project.created_at) { %>
+
+                                    <p class="project-date">
+
+                                        <%= new Date(
+                                            project.created_at
+                                        ).toLocaleDateString(
+                                            "en-US",
+                                            {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric"
+                                            }
+                                        ) %>
+
+                                    </p>
+
+                                <% } %>
+
+
+
+                                <!-- Title -->
+
+                                <h2 class="project-title">
+                                    <%= project.title %>
+                                </h2>
+
+
+
+                                <!-- Technologies -->
+
+                                <% if (project.technologies) { %>
+
+                                    <div class="project-technologies">
+                                        <%= project.technologies %>
+                                    </div>
+
+                                <% } %>
+
+
+
+                                <!-- Body -->
+
+                                <div class="project-description">
+
+                                    <p>
+                                        <%= project.body %>
+                                    </p>
+
+                                </div>
+
+
+
+                                <!-- Links -->
+
+                                <div class="project-links">
+
+
+                                    <% if (project.github_url) { %>
+
+                                        <a
+                                            href="<%= project.github_url %>"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="project-link-button"
+                                        >
+                                            GitHub
+                                        </a>
+
+                                    <% } %>
+
+
+
+                                    <% if (project.live_url) { %>
+
+                                        <a
+                                            href="<%= project.live_url %>"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="project-link-button"
+                                        >
+                                            Live Application
+                                        </a>
+
+                                    <% } %>
+
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                    <% }); %>
+
+                </div>
+
+            <% } %>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         ADMIN CODE MODAL
+    ========================================= -->
+
+    <div
+        class="modal fade"
+        id="adminCodeModal"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content steam-modal">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Administrator Access
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <p>
+                        Enter administrator code to manage this project.
+                    </p>
+
+                    <input
+                        type="password"
+                        id="adminCode"
+                        class="form-control steam-input"
+                        placeholder="Administrator code"
+                        autocomplete="off"
+                    >
+
+                    <p
+                        id="adminCodeError"
+                        class="admin-error"
+                    ></p>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="modal-cancel-button"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        class="modal-confirm-button"
+                        id="verifyAdminButton"
+                    >
+                        Continue
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         EDIT OR DELETE MODAL
+    ========================================= -->
+
+    <div
+        class="modal fade"
+        id="manageProjectModal"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content steam-modal">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Manage Project
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <p>
+                        What would you like to do with this project?
+                    </p>
+
+                </div>
+
+
+                <div class="modal-footer manage-buttons">
+
+                    <button
+                        type="button"
+                        class="modal-cancel-button"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        class="edit-project-button"
+                        id="editProjectButton"
+                    >
+                        Edit Project
+                    </button>
+
+                    <button
+                        type="button"
+                        class="delete-project-button"
+                        id="deleteProjectButton"
+                    >
+                        Delete Project
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         EDIT PROJECT MODAL
+    ========================================= -->
+
+    <div
+        class="modal fade"
+        id="editProjectModal"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content steam-modal">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Edit Project
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+
+                <form
+                    id="editProjectForm"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+
+                    <input
+                        type="hidden"
+                        name="_method"
+                        value="PUT"
+                    >
+
+
+                    <div class="modal-body">
+
+
+                        <!-- Edit Title -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="editTitle"
+                                class="form-label"
+                            >
+                                Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="editTitle"
+                                name="title"
+                                class="form-control steam-input"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- Edit Body -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="editBody"
+                                class="form-label"
+                            >
+                                Description
+                            </label>
+
+                            <textarea
+                                id="editBody"
+                                name="body"
+                                rows="7"
+                                class="form-control steam-input"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- Edit Technologies -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="editTechnologies"
+                                class="form-label"
+                            >
+                                Technologies
+                            </label>
+
+                            <input
+                                type="text"
+                                id="editTechnologies"
+                                name="technologies"
+                                class="form-control steam-input"
+                            >
+
+                        </div>
+
+
+
+                        <!-- Edit GitHub -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="editGithubUrl"
+                                class="form-label"
+                            >
+                                GitHub URL
+                            </label>
+
+                            <input
+                                type="url"
+                                id="editGithubUrl"
+                                name="github_url"
+                                class="form-control steam-input"
+                            >
+
+                        </div>
+
+
+
+                        <!-- Edit Live URL -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="editLiveUrl"
+                                class="form-label"
+                            >
+                                Live Application URL
+                            </label>
+
+                            <input
+                                type="url"
+                                id="editLiveUrl"
+                                name="live_url"
+                                class="form-control steam-input"
+                            >
+
+                        </div>
+
+
+
+                        <!-- Replace Image -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="editImage"
+                                class="form-label"
+                            >
+                                Replace Image
+                            </label>
+
+                            <input
+                                type="file"
+                                id="editImage"
+                                name="image"
+                                accept="image/*"
+                                class="form-control steam-input"
+                            >
+
+                            <small class="edit-image-note">
+                                Leave this empty to keep the current image.
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="modal-footer">
+
+                        <button
+                            type="button"
+                            class="modal-cancel-button"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="modal-confirm-button"
+                        >
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         DELETE FORM
+    ========================================= -->
+
+    <form
+        id="deleteProjectForm"
+        method="POST"
+        style="display: none;"
+    >
+
+        <input
+            type="hidden"
+            name="_method"
+            value="DELETE"
+        >
+
+        <input
+            type="hidden"
+            name="adminCode"
+            id="deleteAdminCode"
+        >
+
+    </form>
+
+
+
+    <!-- ========================================
+         BOOTSTRAP
+    ========================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+
+    <!-- ========================================
+         PROJECT JAVASCRIPT
+    ========================================= -->
+
+    <script src="/js/projectScreen.js"></script>
+
+
+</body>
+
+</html>

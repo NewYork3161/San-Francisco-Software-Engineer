@@ -1,0 +1,1231 @@
+:root {
+    --steam-bg: #1b2838;
+    --steam-dark: #171a21;
+    --steam-panel: #22384b;
+    --steam-panel-light: #2a475e;
+    --steam-blue: #66c0f4;
+    --steam-bright-blue: #1a9fff;
+    --steam-text: #c7d5e0;
+    --steam-muted: #8f98a0;
+    --steam-white: #ffffff;
+    --steam-danger: #d9534f;
+
+    --steam-border: rgba(102, 192, 244, 0.22);
+    --steam-border-bright: rgba(102, 192, 244, 0.55);
+
+    --shadow: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--steam-text);
+
+    background:
+        radial-gradient(
+            circle at top,
+            #2a475e 0%,
+            #1b2838 35%,
+            #171a21 100%
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.steam-navbar {
+    padding: 14px 0;
+
+    background:
+        rgba(23, 26, 33, 0.98);
+
+    border-bottom:
+        1px solid var(--steam-border);
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.steam-navbar .navbar-brand {
+    color: var(--steam-white);
+
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.steam-navbar .navbar-brand:hover {
+    color: var(--steam-blue);
+}
+
+.steam-navbar .nav-link {
+    margin-left: 18px;
+
+    color: var(--steam-text);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    letter-spacing: 0.8px;
+
+    transition:
+        color 0.2s ease;
+}
+
+.steam-navbar .nav-link:hover,
+.steam-navbar .nav-link.active {
+    color: var(--steam-blue);
+}
+
+
+/* ========================================
+   MAIN PAGE
+======================================== */
+
+.project-page {
+    max-width: 1200px;
+
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+
+/* ========================================
+   PAGE HEADER
+======================================== */
+
+.project-header-section {
+    margin-bottom: 40px;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(42, 71, 94, 0.96),
+            rgba(23, 26, 33, 0.98)
+        );
+
+    border:
+        1px solid var(--steam-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 18px 40px var(--shadow);
+}
+
+.page-label,
+.small-label {
+    margin: 0 0 10px;
+
+    color: var(--steam-blue);
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+}
+
+.project-header-section h1 {
+    margin: 0;
+
+    color: var(--steam-white);
+
+    font-size:
+        clamp(
+            2.8rem,
+            7vw,
+            5rem
+        );
+
+    font-weight: 800;
+}
+
+.project-intro {
+    max-width: 750px;
+
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    color: var(--steam-text);
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CREATE PROJECT CARD
+======================================== */
+
+.create-project-card {
+    margin-bottom: 60px;
+
+    padding: 38px;
+
+    background:
+        rgba(23, 26, 33, 0.96);
+
+    border:
+        1px solid var(--steam-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.create-project-heading {
+    margin-bottom: 30px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid var(--steam-border);
+}
+
+.create-project-heading h2 {
+    margin: 0;
+
+    color: var(--steam-white);
+
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.form-label {
+    color: var(--steam-text);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.steam-input {
+    padding: 13px 15px;
+
+    color: var(--steam-white);
+
+    background:
+        #16202c;
+
+    border:
+        1px solid rgba(102, 192, 244, 0.25);
+
+    border-radius: 6px;
+
+    box-shadow: none;
+}
+
+.steam-input::placeholder {
+    color: #6d7882;
+}
+
+.steam-input:focus {
+    color: var(--steam-white);
+
+    background:
+        #182532;
+
+    border-color:
+        var(--steam-blue);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(102, 192, 244, 0.12);
+}
+
+textarea.steam-input {
+    resize: vertical;
+
+    min-height: 160px;
+}
+
+
+/* ========================================
+   IMAGE DROP ZONE
+======================================== */
+
+.image-drop-zone {
+    position: relative;
+
+    min-height: 300px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(42, 71, 94, 0.5),
+            rgba(23, 26, 33, 0.9)
+        );
+
+    border:
+        2px dashed rgba(102, 192, 244, 0.4);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.image-drop-zone:hover,
+.image-drop-zone.drag-over {
+    border-color:
+        var(--steam-blue);
+
+    background:
+        rgba(42, 71, 94, 0.75);
+
+    box-shadow:
+        inset 0 0 25px rgba(102, 192, 244, 0.05);
+}
+
+.drop-zone-content {
+    text-align: center;
+}
+
+.upload-symbol {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin:
+        0 auto 18px;
+
+    color:
+        var(--steam-blue);
+
+    background:
+        rgba(102, 192, 244, 0.08);
+
+    border:
+        1px solid var(--steam-border);
+
+    border-radius:
+        50%;
+
+    font-size:
+        2rem;
+}
+
+.drop-zone-content h3 {
+    color:
+        var(--steam-white);
+
+    font-size:
+        1.2rem;
+}
+
+.drop-zone-content p {
+    margin-bottom:
+        5px;
+
+    color:
+        var(--steam-muted);
+}
+
+.drop-zone-content span {
+    display:
+        block;
+
+    margin:
+        10px 0;
+
+    color:
+        var(--steam-muted);
+}
+
+.choose-image-button {
+    padding:
+        10px 20px;
+
+    color:
+        var(--steam-white);
+
+    background:
+        #2a475e;
+
+    border:
+        1px solid var(--steam-border);
+
+    border-radius:
+        5px;
+
+    font-weight:
+        700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.choose-image-button:hover {
+    background:
+        #315875;
+
+    border-color:
+        var(--steam-blue);
+}
+
+
+/* ========================================
+   IMAGE PREVIEW
+======================================== */
+
+.image-preview-container {
+    display:
+        none;
+
+    width:
+        100%;
+}
+
+.image-preview-container.active {
+    display:
+        block;
+}
+
+.image-preview-container img {
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-height:
+        500px;
+
+    object-fit:
+        contain;
+
+    border-radius:
+        8px;
+}
+
+
+/* ========================================
+   PUBLISH BUTTON
+======================================== */
+
+.form-actions {
+    display:
+        flex;
+
+    justify-content:
+        flex-end;
+}
+
+.publish-project-button {
+    min-width:
+        200px;
+
+    padding:
+        13px 25px;
+
+    color:
+        var(--steam-white);
+
+    background:
+        linear-gradient(
+            90deg,
+            #1675b8,
+            #1a9fff
+        );
+
+    border:
+        1px solid rgba(102, 192, 244, 0.4);
+
+    border-radius:
+        5px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.5px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.publish-project-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(26, 159, 255, 0.25);
+}
+
+
+/* ========================================
+   PROJECT SECTION
+======================================== */
+
+.projects-section-heading {
+    margin-bottom:
+        30px;
+}
+
+.projects-section-heading h2 {
+    margin:
+        0;
+
+    color:
+        var(--steam-white);
+
+    font-size:
+        2rem;
+
+    font-weight:
+        700;
+}
+
+
+/* ========================================
+   PROJECT GRID
+======================================== */
+
+.project-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        28px;
+}
+
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.portfolio-project-card {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(42, 71, 94, 0.96),
+            rgba(23, 26, 33, 0.98)
+        );
+
+    border:
+        1px solid var(--steam-border);
+
+    border-radius:
+        12px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.portfolio-project-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--steam-border-bright);
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(102, 192, 244, 0.06);
+}
+
+
+/* ========================================
+   ADMIN X BUTTON
+======================================== */
+
+.admin-project-button {
+    position:
+        absolute;
+
+    top:
+        12px;
+
+    right:
+        12px;
+
+    z-index:
+        10;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        0;
+
+    color:
+        var(--steam-white);
+
+    background:
+        rgba(23, 26, 33, 0.9);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius:
+        50%;
+
+    font-size:
+        1.4rem;
+
+    line-height:
+        1;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.admin-project-button:hover {
+    transform:
+        scale(1.08);
+
+    background:
+        var(--steam-danger);
+
+    border-color:
+        rgba(255, 255, 255, 0.4);
+}
+
+
+/* ========================================
+   PROJECT IMAGE
+======================================== */
+
+.project-image-wrapper {
+    width:
+        100%;
+
+    height:
+        280px;
+
+    overflow:
+        hidden;
+
+    background:
+        #101820;
+
+    border-bottom:
+        1px solid var(--steam-border);
+}
+
+.project-image {
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.portfolio-project-card:hover .project-image {
+    transform:
+        scale(1.03);
+}
+
+
+/* ========================================
+   PROJECT CONTENT
+======================================== */
+
+.project-content {
+    padding:
+        28px;
+}
+
+.project-date {
+    margin:
+        0 0 8px;
+
+    color:
+        var(--steam-muted);
+
+    font-size:
+        0.78rem;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.7px;
+}
+
+.project-title {
+    margin:
+        0 0 15px;
+
+    color:
+        var(--steam-white);
+
+    font-size:
+        1.6rem;
+
+    font-weight:
+        750;
+}
+
+.project-technologies {
+    margin-bottom:
+        20px;
+
+    padding:
+        10px 13px;
+
+    color:
+        var(--steam-blue);
+
+    background:
+        rgba(23, 26, 33, 0.55);
+
+    border-left:
+        3px solid var(--steam-blue);
+
+    border-radius:
+        4px;
+
+    font-size:
+        0.82rem;
+
+    line-height:
+        1.6;
+}
+
+.project-description p {
+    margin:
+        0;
+
+    color:
+        var(--steam-text);
+
+    line-height:
+        1.75;
+
+    white-space:
+        pre-line;
+}
+
+
+/* ========================================
+   PROJECT LINKS
+======================================== */
+
+.project-links {
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        25px;
+}
+
+.project-link-button {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        10px 16px;
+
+    color:
+        var(--steam-white);
+
+    background:
+        linear-gradient(
+            90deg,
+            #1675b8,
+            #1a9fff
+        );
+
+    border:
+        1px solid rgba(102, 192, 244, 0.35);
+
+    border-radius:
+        5px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-link-button:hover {
+    color:
+        var(--steam-white);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(26, 159, 255, 0.22);
+}
+
+
+/* ========================================
+   NO PROJECTS
+======================================== */
+
+.no-projects {
+    padding:
+        60px 30px;
+
+    text-align:
+        center;
+
+    background:
+        rgba(23, 26, 33, 0.75);
+
+    border:
+        1px dashed var(--steam-border);
+
+    border-radius:
+        10px;
+}
+
+.no-projects h3 {
+    color:
+        var(--steam-white);
+}
+
+.no-projects p {
+    margin-bottom:
+        0;
+
+    color:
+        var(--steam-muted);
+}
+
+
+/* ========================================
+   MODALS
+======================================== */
+
+.steam-modal {
+    color:
+        var(--steam-text);
+
+    background:
+        #1b2838;
+
+    border:
+        1px solid var(--steam-border);
+
+    border-radius:
+        10px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.65);
+}
+
+.steam-modal .modal-header {
+    border-bottom:
+        1px solid var(--steam-border);
+}
+
+.steam-modal .modal-footer {
+    border-top:
+        1px solid var(--steam-border);
+}
+
+.steam-modal .modal-title {
+    color:
+        var(--steam-white);
+
+    font-weight:
+        700;
+}
+
+.steam-modal p {
+    color:
+        var(--steam-text);
+}
+
+
+/* ========================================
+   MODAL BUTTONS
+======================================== */
+
+.modal-cancel-button,
+.modal-confirm-button,
+.edit-project-button,
+.delete-project-button {
+    padding:
+        10px 18px;
+
+    border-radius:
+        5px;
+
+    font-size:
+        0.85rem;
+
+    font-weight:
+        700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.modal-cancel-button {
+    color:
+        var(--steam-text);
+
+    background:
+        #2a475e;
+
+    border:
+        1px solid var(--steam-border);
+}
+
+.modal-confirm-button,
+.edit-project-button {
+    color:
+        var(--steam-white);
+
+    background:
+        #1675b8;
+
+    border:
+        1px solid var(--steam-blue);
+}
+
+.delete-project-button {
+    color:
+        var(--steam-white);
+
+    background:
+        #a83232;
+
+    border:
+        1px solid #d9534f;
+}
+
+.modal-cancel-button:hover,
+.modal-confirm-button:hover,
+.edit-project-button:hover,
+.delete-project-button:hover {
+    transform:
+        translateY(-1px);
+}
+
+.delete-project-button:hover {
+    background:
+        #d9534f;
+}
+
+
+/* ========================================
+   ADMIN ERROR
+======================================== */
+
+.admin-error {
+    min-height:
+        20px;
+
+    margin:
+        10px 0 0;
+
+    color:
+        #ff7373 !important;
+
+    font-size:
+        0.85rem;
+}
+
+
+/* ========================================
+   EDIT IMAGE NOTE
+======================================== */
+
+.edit-image-note {
+    display:
+        block;
+
+    margin-top:
+        7px;
+
+    color:
+        var(--steam-muted);
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+    width:
+        10px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        #171a21;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        #2a475e;
+
+    border-radius:
+        10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        #66c0f4;
+}
+
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+    color:
+        var(--steam-white);
+
+    background:
+        rgba(26, 159, 255, 0.7);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991px) {
+
+    .project-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .steam-navbar .nav-link {
+        margin-left:
+            0;
+
+        margin-top:
+            8px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+
+    .project-page {
+        padding-top:
+            25px;
+
+        padding-bottom:
+            45px;
+    }
+
+    .project-header-section {
+        padding:
+            30px 24px;
+    }
+
+    .project-header-section h1 {
+        font-size:
+            3rem;
+    }
+
+    .create-project-card {
+        padding:
+            28px 22px;
+    }
+
+    .image-drop-zone {
+        min-height:
+            240px;
+
+        padding:
+            20px;
+    }
+
+    .project-image-wrapper {
+        height:
+            230px;
+    }
+
+    .project-content {
+        padding:
+            23px;
+    }
+
+    .form-actions {
+        display:
+            block;
+    }
+
+    .publish-project-button {
+        width:
+            100%;
+    }
+
+    .project-links {
+        flex-direction:
+            column;
+    }
+
+    .project-link-button {
+        width:
+            100%;
+    }
+
+    .manage-buttons {
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
+    .manage-buttons button {
+        width:
+            100%;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+    .project-header-section {
+        padding:
+            25px 18px;
+    }
+
+    .project-header-section h1 {
+        font-size:
+            2.5rem;
+    }
+
+    .create-project-card {
+        padding:
+            24px 18px;
+    }
+
+    .project-content {
+        padding:
+            20px;
+    }
+
+    .project-title {
+        font-size:
+            1.35rem;
+    }
+
+    .project-image-wrapper {
+        height:
+            200px;
+    }
+
+}

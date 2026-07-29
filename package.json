@@ -1,0 +1,26 @@
+{
+  "name": "software-engineer-sf",
+  "version": "1.0.0",
+  "description": "San Francisco Software Engineer and Full-Stack Developer Portfolio",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "software-engineer",
+    "full-stack",
+    "web-development",
+    "portfolio"
+  ],
+  "author": "Michael Clark",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.111.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "method-override": "^3.0.0",
+    "multer": "^2.2.0"
+  }
+}
