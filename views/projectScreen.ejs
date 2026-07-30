@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -9,27 +10,107 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <title>
+        Software Engineering Projects | Michael Clark | C++, Full-Stack, AI Portfolio
+    </title>
+
     <meta
         name="description"
-        content="Software engineering and full-stack development projects by Michael Clark."
+        content="Browse software engineering projects by Michael Clark, including C++, JavaScript, Python, Node.js, Express.js, MongoDB, AI applications, Android development, REST APIs, full-stack web applications, and production business software."
     >
 
-    <title>Projects | Michael Clark</title>
+    <meta
+        name="keywords"
+        content="Michael Clark, Software Engineering Projects, Software Portfolio, C++ Projects, JavaScript Projects, Python Projects, Full-Stack Developer, Node.js, Express.js, MongoDB, SQL, HTML5, CSS3, Bootstrap, REST API, Backend Development, Front-End Development, AI Projects, Artificial Intelligence, OpenAI API, Android Development, Java, Kotlin, Firebase, SQLite, Computer Vision, YOLO, Git, GitHub, Render, Business Applications, Web Applications, Programming Portfolio, Walnut Creek, San Francisco, Bay Area, California"
+    >
+
+    <meta
+        name="author"
+        content="Michael Clark"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0f172a"
+    >
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Michael Clark | Software Engineering Projects"
+    >
+
+    <meta
+        property="og:description"
+        content="Software engineering portfolio featuring C++, JavaScript, Python, AI, Android, backend development, and full-stack web application projects."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="/images/logo.png"
+    >
+
+    <!-- Twitter -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Michael Clark | Software Engineering Projects"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Explore software engineering, AI, C++, JavaScript, Python, Android, and full-stack development projects."
+    >
+
+    <meta
+        name="twitter:image"
+        content="/images/logo.png"
+    >
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/logo.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="/images/logo.png"
+    >
 
     <!-- Bootstrap -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
     <!-- Project CSS -->
+
     <link
         rel="stylesheet"
         href="/css/projectScreen.css"
     >
+
 </head>
-
-
 <body>
 
 
@@ -58,7 +139,9 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
 
@@ -70,39 +153,50 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
+
                         <a
                             class="nav-link"
                             href="/"
                         >
                             HOME
                         </a>
+
                     </li>
 
+
                     <li class="nav-item">
+
                         <a
                             class="nav-link active"
                             href="/projects"
                         >
                             PROJECTS
                         </a>
+
                     </li>
 
+
                     <li class="nav-item">
+
                         <a
                             class="nav-link"
                             href="/resume"
                         >
                             RESUME
                         </a>
+
                     </li>
 
+
                     <li class="nav-item">
+
                         <a
                             class="nav-link"
                             href="/blog"
                         >
                             BLOG
                         </a>
+
                     </li>
 
                 </ul>
@@ -137,9 +231,9 @@
             </h1>
 
             <p class="project-intro">
-                A collection of software engineering,
-                full-stack development, mobile development,
-                database, and AI projects.
+                A collection of production business applications,
+                full-stack websites, mobile applications, artificial
+                intelligence systems, and C++ software projects.
             </p>
 
         </section>
@@ -147,245 +241,11 @@
 
 
         <!-- ========================================
-             CREATE PROJECT
-        ========================================= -->
-
-        <section class="create-project-card">
-
-            <div class="create-project-heading">
-
-                <div>
-                    <p class="small-label">
-                        PORTFOLIO MANAGER
-                    </p>
-
-                    <h2>
-                        Add New Project
-                    </h2>
-                </div>
-
-            </div>
-
-
-            <form
-                action="/projects"
-                method="POST"
-                enctype="multipart/form-data"
-                class="project-form"
-            >
-
-
-                <!-- Project Title -->
-
-                <div class="mb-4">
-
-                    <label
-                        for="title"
-                        class="form-label"
-                    >
-                        Project Title
-                    </label>
-
-                    <input
-                        type="text"
-                        id="title"
-                        name="title"
-                        class="form-control steam-input"
-                        placeholder="Enter project title"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- Project Description -->
-
-                <div class="mb-4">
-
-                    <label
-                        for="body"
-                        class="form-label"
-                    >
-                        Project Description
-                    </label>
-
-                    <textarea
-                        id="body"
-                        name="body"
-                        class="form-control steam-input"
-                        rows="7"
-                        placeholder="Describe the project..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-
-                <!-- Technologies -->
-
-                <div class="mb-4">
-
-                    <label
-                        for="technologies"
-                        class="form-label"
-                    >
-                        Technologies
-                    </label>
-
-                    <input
-                        type="text"
-                        id="technologies"
-                        name="technologies"
-                        class="form-control steam-input"
-                        placeholder="JavaScript, Node.js, Express, Supabase..."
-                    >
-
-                </div>
-
-
-
-                <!-- GitHub URL -->
-
-                <div class="mb-4">
-
-                    <label
-                        for="github_url"
-                        class="form-label"
-                    >
-                        GitHub URL
-                    </label>
-
-                    <input
-                        type="url"
-                        id="github_url"
-                        name="github_url"
-                        class="form-control steam-input"
-                        placeholder="GitHub repository URL"
-                    >
-
-                </div>
-
-
-
-                <!-- Live Application URL -->
-
-                <div class="mb-4">
-
-                    <label
-                        for="live_url"
-                        class="form-label"
-                    >
-                        Live Application URL
-                    </label>
-
-                    <input
-                        type="url"
-                        id="live_url"
-                        name="live_url"
-                        class="form-control steam-input"
-                        placeholder="Live application URL"
-                    >
-
-                </div>
-
-
-
-                <!-- Image Upload -->
-
-                <div class="mb-4">
-
-                    <label class="form-label">
-                        Project Image
-                    </label>
-
-
-                    <div
-                        class="image-drop-zone"
-                        id="imageDropZone"
-                    >
-
-                        <input
-                            type="file"
-                            id="projectImage"
-                            name="image"
-                            accept="image/*"
-                            hidden
-                        >
-
-
-                        <div class="drop-zone-content">
-
-                            <div class="upload-symbol">
-                                +
-                            </div>
-
-                            <h3>
-                                Add Project Image
-                            </h3>
-
-                            <p>
-                                Drag and drop an image here
-                            </p>
-
-                            <span>
-                                or
-                            </span>
-
-                            <button
-                                type="button"
-                                class="choose-image-button"
-                                id="chooseImageButton"
-                            >
-                                Choose Image
-                            </button>
-
-                        </div>
-
-
-                        <div
-                            class="image-preview-container"
-                            id="imagePreviewContainer"
-                        >
-
-                            <img
-                                id="imagePreview"
-                                alt="Project preview"
-                            >
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Submit -->
-
-                <div class="form-actions">
-
-                    <button
-                        type="submit"
-                        class="publish-project-button"
-                    >
-                        Publish Project
-                    </button>
-
-                </div>
-
-            </form>
-
-        </section>
-
-
-
-        <!-- ========================================
-             PROJECT LIST
+             PROJECTS
         ========================================= -->
 
         <section class="projects-section">
+
 
             <div class="projects-section-heading">
 
@@ -401,186 +261,570 @@
 
 
 
-            <!-- ========================================
-                 NO PROJECTS
-            ========================================= -->
-
-            <% if (!projects || projects.length === 0) { %>
-
-                <div class="no-projects">
-
-                    <h3>
-                        No projects yet.
-                    </h3>
-
-                    <p>
-                        Projects added above will appear here.
-                    </p>
-
-                </div>
-
-            <% } %>
+            <div class="project-grid">
 
 
+                <!-- ========================================
+                     PROJECT 1
+                     BOWER COMPANY CONSTRUCTION
+                ========================================= -->
 
-            <!-- ========================================
-                 DATABASE PROJECT LOOP
-            ========================================= -->
+                <article class="portfolio-project-card">
 
-            <% if (projects && projects.length > 0) { %>
+                    <div class="project-content">
 
-                <div class="project-grid">
-
-                    <% projects.forEach(project => { %>
-
-
-                        <!-- ========================================
-                             INDIVIDUAL PROJECT CARD
-                        ========================================= -->
-
-                        <article
-                            class="portfolio-project-card"
-                            data-project-id="<%= project.id %>"
-                        >
+                        <p class="project-date">
+                            MAY 2024 – PRESENT
+                        </p>
 
 
-                            <!-- Admin X Button -->
+                        <h2 class="project-title">
+                            Bower Company Construction
+                        </h2>
 
-                            <button
-                                type="button"
-                                class="admin-project-button"
-                                data-project-id="<%= project.id %>"
-                                aria-label="Manage project"
+
+                        <p class="project-category">
+                            Production Full-Stack Business Application
+                        </p>
+
+
+                        <div class="project-technologies">
+                            JavaScript • Node.js • Express.js • EJS •
+                            MongoDB • Mongoose • HTML5 • CSS3 •
+                            Bootstrap • Jest • Supertest • Render
+                        </div>
+
+
+                        <div class="project-description">
+
+                            <p>
+                                Designed, developed, and deployed a production
+                                full-stack web application supporting Bower
+                                Company Construction's excavation, land
+                                improvement, and vegetation-management services.
+                            </p>
+
+                            <p>
+                                Built responsive front-end components and
+                                server-side functionality using JavaScript,
+                                Node.js, Express.js, EJS, MongoDB, Mongoose,
+                                HTML5, CSS3, and Bootstrap.
+                            </p>
+
+                            <p>
+                                Created customer service and quote-request
+                                workflows that capture, validate, store, and
+                                organize customer information. Developed a
+                                custom administrative dashboard for reviewing
+                                inquiries, updating customer records, tracking
+                                response status, and supporting daily business
+                                operations.
+                            </p>
+
+                            <p>
+                                Developed automated unit and integration tests
+                                using Jest and Supertest to validate application
+                                routes, customer workflows, database operations,
+                                and administrative functionality. Managed source
+                                control through Git and GitHub and deployed the
+                                application to Render.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ========================================
+                     PROJECT 2
+                     HOFFMAN'S REPTILE SHOP
+                ========================================= -->
+
+                <article class="portfolio-project-card">
+
+                    <div class="project-content">
+
+                        <p class="project-date">
+                            JULY 2025 – AUGUST 2025
+                        </p>
+
+
+                        <h2 class="project-title">
+                            Hoffman's Reptile Shop
+                        </h2>
+
+
+                        <p class="project-category">
+                            Production Retail and Content Management Application
+                        </p>
+
+
+                        <div class="project-technologies">
+                            JavaScript • Node.js • Express.js • EJS •
+                            MongoDB • Mongoose • HTML5 • CSS3 •
+                            Bootstrap • Authentication • Render
+                        </div>
+
+
+                        <div class="project-description">
+
+                            <p>
+                                Designed, developed, and deployed a production
+                                full-stack web application for a reptile retail
+                                business in Concord, California.
+                            </p>
+
+                            <p>
+                                Built a custom content management system that
+                                allows business owners to create, update, and
+                                manage products, pricing, descriptions, images,
+                                categories, reptile-care information, and other
+                                website content without modifying the source code.
+                            </p>
+
+                            <p>
+                                Implemented user authentication, session
+                                management, and role-based administrative access
+                                to secure business-management functionality.
+                                Designed backend workflows supporting dynamic
+                                product information, customer interactions, and
+                                administrative operations.
+                            </p>
+
+                            <p>
+                                Developed customer contact functionality, email
+                                notifications, analytics features, responsive
+                                layouts, and mobile-friendly interfaces. Managed
+                                Git-based source control and production deployment
+                                on Render.
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/NewYork3161/Hoffman-s_reptiles_shop"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link-button"
                             >
-                                ×
-                            </button>
+                                GitHub
+                            </a>
+
+
+                            <a
+                                href="https://hoffman-s-reptiles-shop-1-fgvf.onrender.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link-button"
+                            >
+                                Live Application
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
 
 
 
-                            <!-- Project Image -->
+                <!-- ========================================
+                     PROJECT 3
+                     SHELFLIFE
+                ========================================= -->
 
-                            <% if (project.image_url) { %>
+                <article class="portfolio-project-card">
 
-                                <div class="project-image-wrapper">
+                    <div class="project-content">
 
-                                    <img
-                                        src="<%= project.image_url %>"
-                                        alt="<%= project.title %>"
-                                        class="project-image"
-                                    >
-
-                                </div>
-
-                            <% } %>
+                        <p class="project-date">
+                            SOFTWARE DEVELOPMENT PROJECT
+                        </p>
 
 
-
-                            <!-- Project Content -->
-
-                            <div class="project-content">
-
-
-                                <!-- Date -->
-
-                                <% if (project.created_at) { %>
-
-                                    <p class="project-date">
-
-                                        <%= new Date(
-                                            project.created_at
-                                        ).toLocaleDateString(
-                                            "en-US",
-                                            {
-                                                year: "numeric",
-                                                month: "long",
-                                                day: "numeric"
-                                            }
-                                        ) %>
-
-                                    </p>
-
-                                <% } %>
+                        <h2 class="project-title">
+                            ShelfLife
+                        </h2>
 
 
-
-                                <!-- Title -->
-
-                                <h2 class="project-title">
-                                    <%= project.title %>
-                                </h2>
+                        <p class="project-category">
+                            AI Food Tracking and Object Recognition Mobile Application
+                        </p>
 
 
-
-                                <!-- Technologies -->
-
-                                <% if (project.technologies) { %>
-
-                                    <div class="project-technologies">
-                                        <%= project.technologies %>
-                                    </div>
-
-                                <% } %>
+                        <div class="project-technologies">
+                            Java • Android • Firebase • SQLite • JSON •
+                            Computer Vision • YOLO • Artificial Intelligence •
+                            Barcode Scanning
+                        </div>
 
 
+                        <div class="project-description">
 
-                                <!-- Body -->
+                            <p>
+                                Developed an Android application combining
+                                computer vision, artificial intelligence, cloud
+                                authentication, and local data storage to help
+                                users track food inventory and reduce food waste.
+                            </p>
 
-                                <div class="project-description">
+                            <p>
+                                Integrated a YOLO-based computer vision model
+                                with GPT functionality to recognize food items
+                                from user-provided images and support intelligent
+                                application features.
+                            </p>
 
-                                    <p>
-                                        <%= project.body %>
-                                    </p>
+                            <p>
+                                Built an expiration-tracking system using
+                                food-storage guideline data and persistent
+                                inventory records. Converted a large JSON dataset
+                                into an optimized SQLite database for fast offline
+                                searches and structured storage information.
+                            </p>
 
-                                </div>
+                            <p>
+                                Implemented Firebase Authentication, barcode
+                                scanning, persistent local storage, and
+                                AI-assisted recipe recommendations. Applied
+                                object-oriented programming, modular application
+                                architecture, debugging, and Git version control
+                                throughout development.
+                            </p>
+
+                        </div>
 
 
+                        <div class="project-links">
 
-                                <!-- Links -->
+                            <a
+                                href="https://github.com/TheLostSoul56/Shelf-Life"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link-button"
+                            >
+                                GitHub
+                            </a>
 
-                                <div class="project-links">
+                        </div>
 
+                    </div>
 
-                                    <% if (project.github_url) { %>
-
-                                        <a
-                                            href="<%= project.github_url %>"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="project-link-button"
-                                        >
-                                            GitHub
-                                        </a>
-
-                                    <% } %>
+                </article>
 
 
 
-                                    <% if (project.live_url) { %>
+                <!-- ========================================
+                     PROJECT 4
+                     GIGGLEBOT
+                ========================================= -->
 
-                                        <a
-                                            href="<%= project.live_url %>"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="project-link-button"
-                                        >
-                                            Live Application
-                                        </a>
+                <article class="portfolio-project-card">
 
-                                    <% } %>
+                    <div class="project-content">
 
-
-                                </div>
-
-                            </div>
-
-                        </article>
+                        <p class="project-date">
+                            IN ACTIVE DEVELOPMENT
+                        </p>
 
 
-                    <% }); %>
+                        <h2 class="project-title">
+                            GiggleBot
+                        </h2>
 
-                </div>
 
-            <% } %>
+                        <p class="project-category">
+                            AI Educational Web Application
+                        </p>
+
+
+                        <div class="project-technologies">
+                            JavaScript • Node.js • Express.js • EJS •
+                            MongoDB • OpenAI API • RESTful APIs •
+                            HTML5 • CSS3 • Render
+                        </div>
+
+
+                        <div class="project-description">
+
+                            <p>
+                                Developing a full-stack artificial intelligence
+                                educational application designed to provide
+                                interactive conversations, storytelling,
+                                educational activities, and personalized learning
+                                experiences.
+                            </p>
+
+                            <p>
+                                Integrated the OpenAI API with a Node.js and
+                                Express.js backend to generate dynamic educational
+                                conversations and age-appropriate content.
+                            </p>
+
+                            <p>
+                                Implemented user session management, conversation
+                                logging, and persistent MongoDB data storage.
+                                Developed RESTful backend functionality for
+                                handling users, conversations, application data,
+                                and AI-generated responses.
+                            </p>
+
+                            <p>
+                                Designed a responsive and child-friendly interface
+                                focused on accessibility, usability, safety, and
+                                interactive learning. Deployed the application to
+                                Render while continuing feature development,
+                                testing, and backend improvements.
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/NewYork3161/GiggleBot"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link-button"
+                            >
+                                GitHub
+                            </a>
+
+
+                            <a
+                                href="https://gigglebot-0xu7.onrender.com/gigglebot"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link-button"
+                            >
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ========================================
+                     PROJECT 5
+                     CONWAY'S GAME OF LIFE
+                ========================================= -->
+
+                <article class="portfolio-project-card">
+
+                    <div class="project-content">
+
+                        <p class="project-date">
+                            COMPUTER SCIENCE PROJECT
+                        </p>
+
+
+                        <h2 class="project-title">
+                            Conway's Game of Life
+                        </h2>
+
+
+                        <p class="project-category">
+                            C++ Cellular Automata Simulation
+                        </p>
+
+
+                        <div class="project-technologies">
+                            C++ • Object-Oriented Programming •
+                            Algorithms • Data Structures •
+                            Grid Processing • Simulation
+                        </div>
+
+
+                        <div class="project-description">
+
+                            <p>
+                                Developed a C++ implementation of Conway's Game
+                                of Life, a cellular automata simulation in which
+                                cells change between active and inactive states
+                                based on the condition of neighboring cells.
+                            </p>
+
+                            <p>
+                                Applied object-oriented programming principles
+                                to organize the simulation into reusable and
+                                maintainable classes. Created logic for grid
+                                initialization, neighboring-cell calculations,
+                                state transitions, simulation updates, and
+                                console-based output.
+                            </p>
+
+                            <p>
+                                The project demonstrates algorithm design,
+                                conditional logic, loops, multidimensional data
+                                structures, debugging, program organization, and
+                                the implementation of mathematical rules within
+                                a software simulation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ========================================
+                     PROJECT 6
+                     PERSONAL PORTFOLIO
+                ========================================= -->
+
+                <article class="portfolio-project-card">
+
+                    <div class="project-content">
+
+                        <p class="project-date">
+                            IN ACTIVE DEVELOPMENT
+                        </p>
+
+
+                        <h2 class="project-title">
+                            Michael Clark Software Engineering Portfolio
+                        </h2>
+
+
+                        <p class="project-category">
+                            Personal Portfolio and Technical Blog
+                        </p>
+
+
+                        <div class="project-technologies">
+                            JavaScript • Node.js • Express.js • EJS •
+                            HTML5 • CSS3 • Bootstrap • Supabase •
+                            Responsive Web Design
+                        </div>
+
+
+                        <div class="project-description">
+
+                            <p>
+                                Designed and developed a personal software
+                                engineering portfolio to present professional
+                                experience, technical skills, education, software
+                                projects, source-code repositories, and ongoing
+                                development work.
+                            </p>
+
+                            <p>
+                                Built the website using Node.js, Express.js, EJS,
+                                JavaScript, HTML5, CSS3, and Bootstrap. Created
+                                custom responsive layouts for desktop, tablet,
+                                and mobile devices while maintaining a consistent
+                                dark software-engineering design.
+                            </p>
+
+                            <p>
+                                Developed dedicated pages for projects, résumé
+                                information, professional background, and technical
+                                blog posts. The Projects page uses hard-coded
+                                portfolio content for straightforward maintenance,
+                                while the blog system supports dynamic content
+                                management.
+                            </p>
+
+                            <p>
+                                The website serves as a central professional
+                                platform where employers, recruiters, developers,
+                                and clients can review completed work, technical
+                                capabilities, and active software projects.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ========================================
+                     PROJECT 7
+                     BUSINESS OPERATIONS PLATFORM
+                ========================================= -->
+
+                <article class="portfolio-project-card">
+
+                    <div class="project-content">
+
+                        <p class="project-date">
+                            IN DEVELOPMENT
+                        </p>
+
+
+                        <h2 class="project-title">
+                            Construction Business Operations Platform
+                        </h2>
+
+
+                        <p class="project-category">
+                            Administrative and Business Management System
+                        </p>
+
+
+                        <div class="project-technologies">
+                            JavaScript • Node.js • Express.js • EJS •
+                            MongoDB • RESTful APIs • Authentication •
+                            Administrative Dashboards
+                        </div>
+
+
+                        <div class="project-description">
+
+                            <p>
+                                Developing a centralized business operations
+                                platform for managing construction-company
+                                workflows, customer records, job information,
+                                employee data, contracts, payroll-related
+                                information, and administrative tasks.
+                            </p>
+
+                            <p>
+                                Designed backend routes, database models, and
+                                administrative interfaces that allow authorized
+                                users to create, review, update, and organize
+                                business information through a secure web
+                                application.
+                            </p>
+
+                            <p>
+                                The platform is intended to reduce reliance on
+                                disconnected spreadsheets and manual paperwork by
+                                combining essential company processes within one
+                                organized system.
+                            </p>
+
+                            <p>
+                                The project demonstrates full-stack software
+                                architecture, database design, authentication,
+                                business-process analysis, administrative
+                                interface development, and practical software
+                                development for real operational needs.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
 
         </section>
 
@@ -590,416 +834,12 @@
 
 
     <!-- ========================================
-         ADMIN CODE MODAL
-    ========================================= -->
-
-    <div
-        class="modal fade"
-        id="adminCodeModal"
-        tabindex="-1"
-        aria-hidden="true"
-    >
-
-        <div class="modal-dialog modal-dialog-centered">
-
-            <div class="modal-content steam-modal">
-
-                <div class="modal-header">
-
-                    <h5 class="modal-title">
-                        Administrator Access
-                    </h5>
-
-                    <button
-                        type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal"
-                    ></button>
-
-                </div>
-
-
-                <div class="modal-body">
-
-                    <p>
-                        Enter administrator code to manage this project.
-                    </p>
-
-                    <input
-                        type="password"
-                        id="adminCode"
-                        class="form-control steam-input"
-                        placeholder="Administrator code"
-                        autocomplete="off"
-                    >
-
-                    <p
-                        id="adminCodeError"
-                        class="admin-error"
-                    ></p>
-
-                </div>
-
-
-                <div class="modal-footer">
-
-                    <button
-                        type="button"
-                        class="modal-cancel-button"
-                        data-bs-dismiss="modal"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        type="button"
-                        class="modal-confirm-button"
-                        id="verifyAdminButton"
-                    >
-                        Continue
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- ========================================
-         EDIT OR DELETE MODAL
-    ========================================= -->
-
-    <div
-        class="modal fade"
-        id="manageProjectModal"
-        tabindex="-1"
-        aria-hidden="true"
-    >
-
-        <div class="modal-dialog modal-dialog-centered">
-
-            <div class="modal-content steam-modal">
-
-                <div class="modal-header">
-
-                    <h5 class="modal-title">
-                        Manage Project
-                    </h5>
-
-                    <button
-                        type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal"
-                    ></button>
-
-                </div>
-
-
-                <div class="modal-body">
-
-                    <p>
-                        What would you like to do with this project?
-                    </p>
-
-                </div>
-
-
-                <div class="modal-footer manage-buttons">
-
-                    <button
-                        type="button"
-                        class="modal-cancel-button"
-                        data-bs-dismiss="modal"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        type="button"
-                        class="edit-project-button"
-                        id="editProjectButton"
-                    >
-                        Edit Project
-                    </button>
-
-                    <button
-                        type="button"
-                        class="delete-project-button"
-                        id="deleteProjectButton"
-                    >
-                        Delete Project
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- ========================================
-         EDIT PROJECT MODAL
-    ========================================= -->
-
-    <div
-        class="modal fade"
-        id="editProjectModal"
-        tabindex="-1"
-        aria-hidden="true"
-    >
-
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-
-            <div class="modal-content steam-modal">
-
-                <div class="modal-header">
-
-                    <h5 class="modal-title">
-                        Edit Project
-                    </h5>
-
-                    <button
-                        type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal"
-                    ></button>
-
-                </div>
-
-
-                <form
-                    id="editProjectForm"
-                    method="POST"
-                    enctype="multipart/form-data"
-                >
-
-                    <input
-                        type="hidden"
-                        name="_method"
-                        value="PUT"
-                    >
-
-
-                    <div class="modal-body">
-
-
-                        <!-- Edit Title -->
-
-                        <div class="mb-3">
-
-                            <label
-                                for="editTitle"
-                                class="form-label"
-                            >
-                                Title
-                            </label>
-
-                            <input
-                                type="text"
-                                id="editTitle"
-                                name="title"
-                                class="form-control steam-input"
-                                required
-                            >
-
-                        </div>
-
-
-
-                        <!-- Edit Body -->
-
-                        <div class="mb-3">
-
-                            <label
-                                for="editBody"
-                                class="form-label"
-                            >
-                                Description
-                            </label>
-
-                            <textarea
-                                id="editBody"
-                                name="body"
-                                rows="7"
-                                class="form-control steam-input"
-                                required
-                            ></textarea>
-
-                        </div>
-
-
-
-                        <!-- Edit Technologies -->
-
-                        <div class="mb-3">
-
-                            <label
-                                for="editTechnologies"
-                                class="form-label"
-                            >
-                                Technologies
-                            </label>
-
-                            <input
-                                type="text"
-                                id="editTechnologies"
-                                name="technologies"
-                                class="form-control steam-input"
-                            >
-
-                        </div>
-
-
-
-                        <!-- Edit GitHub -->
-
-                        <div class="mb-3">
-
-                            <label
-                                for="editGithubUrl"
-                                class="form-label"
-                            >
-                                GitHub URL
-                            </label>
-
-                            <input
-                                type="url"
-                                id="editGithubUrl"
-                                name="github_url"
-                                class="form-control steam-input"
-                            >
-
-                        </div>
-
-
-
-                        <!-- Edit Live URL -->
-
-                        <div class="mb-3">
-
-                            <label
-                                for="editLiveUrl"
-                                class="form-label"
-                            >
-                                Live Application URL
-                            </label>
-
-                            <input
-                                type="url"
-                                id="editLiveUrl"
-                                name="live_url"
-                                class="form-control steam-input"
-                            >
-
-                        </div>
-
-
-
-                        <!-- Replace Image -->
-
-                        <div class="mb-3">
-
-                            <label
-                                for="editImage"
-                                class="form-label"
-                            >
-                                Replace Image
-                            </label>
-
-                            <input
-                                type="file"
-                                id="editImage"
-                                name="image"
-                                accept="image/*"
-                                class="form-control steam-input"
-                            >
-
-                            <small class="edit-image-note">
-                                Leave this empty to keep the current image.
-                            </small>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="modal-footer">
-
-                        <button
-                            type="button"
-                            class="modal-cancel-button"
-                            data-bs-dismiss="modal"
-                        >
-                            Cancel
-                        </button>
-
-                        <button
-                            type="submit"
-                            class="modal-confirm-button"
-                        >
-                            Save Changes
-                        </button>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- ========================================
-         DELETE FORM
-    ========================================= -->
-
-    <form
-        id="deleteProjectForm"
-        method="POST"
-        style="display: none;"
-    >
-
-        <input
-            type="hidden"
-            name="_method"
-            value="DELETE"
-        >
-
-        <input
-            type="hidden"
-            name="adminCode"
-            id="deleteAdminCode"
-        >
-
-    </form>
-
-
-
-    <!-- ========================================
-         BOOTSTRAP
+         BOOTSTRAP JAVASCRIPT
     ========================================= -->
 
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     ></script>
-
-
-    <!-- ========================================
-         PROJECT JAVASCRIPT
-    ========================================= -->
-
-    <script src="/js/projectScreen.js"></script>
 
 
 </body>
